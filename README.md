@@ -13,16 +13,16 @@ Public-facing source for the **SOVERIX Original Games Center**. The **playable o
 
 ## New standalone 3D practice demo
 
-- **[Play Royal Crystal Run 3D](https://soverix-royal-crystal-3d.soverixnet.workers.dev/)** ([view source](demos/royal-crystal-run-3d/index.html)) is a new independent, browser-playable WebGL runner with touch/keyboard controls, score, lives and local practice coins.
-- Unlike the eight hosted proprietary originals, this **new demonstration is intentionally published in this public repository**. Its complete standalone game page is distributed as a self-contained compressed HTML bundle using native browser gzip support.
+- **[Play Royal Crystal Run 3D](https://soverix-royal-crystal-3d.soverixnet.workers.dev/)** ([view source](demos/royal-crystal-run-3d/index.html)) is an independent 10-stage WebGL runner with two boss stages (5 and 10), three daily missions, touch/keyboard controls, a device-only top-10 leaderboard, scores and local practice coins.
+- Unlike the eight hosted proprietary originals, this **new demonstration is intentionally published in this public repository**. Its standalone HTML/WebGL implementation is now readable in this public repository; the previous compressed v1 entry is archived as `demos/royal-crystal-run-3d/v1-backup.html`.
 - It is **not connected to Sharika Main Wallet, D1 or the private Cloudflare provider**. There are no wagers, purchases or real-money functions. This addition does not change any of the existing eight games.
-- Open the file through a static site such as GitHub Pages; GitHub's `blob` viewer shows source rather than running HTML.
+- The standalone title is already hosted at the Cloudflare link above. GitHub's `blob` viewer shows source rather than running HTML.
 
 ## What is in this repository?
 
 - `index.html`, `assets/site.css`, `assets/site.js` — the English public landing page, eight hosted original game listings, and a link to the standalone 3D demo.
 - `data/games.json` — publicly displayable metadata for the eight hosted games, **not** their game-engine code.
-- `demos/royal-crystal-run-3d/index.html` — the new self-contained public 3D practice game.
+- `demos/royal-crystal-run-3d/index.html` — the public 3D practice game (10 levels, missions, bosses, local ranking).
 - `docs/INTEGRATION.md` — developer integration model and server-side credential rules.
 - `docs/RELEASE_STATUS.md` — verified staging capabilities and unfinished production work.
 - `.github/workflows/validate.yml` — static source checks; does **not** automatically deploy or modify Cloudflare.
