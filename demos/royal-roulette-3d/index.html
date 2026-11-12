@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#130e2c"><meta name="description" content="Free practice Royal Roulette 3D with royal gold design, animated roulette wheel, virtual points and round history.">
+<title>SOVERIX | Royal Roulette 3D</title><link rel="stylesheet" href="../../assets/royal-casino.css"></head>
+<body data-game="roulette"><div class="spark-bg" aria-hidden="true"></div>
+<header><div class="wrap head"><a class="logo" href="../../index.html"><span class="logo-badge">♛</span><span><b>SOVERIX</b><small>ROYAL GAME CENTER</small></span></a>
+<div class="headlinks"><a class="mini-link" href="../../index.html">ALL GAMES</a><a class="mini-link" href="../royal-slots-3d/">SLOTS</a><div class="coinbox"><span>✦</span><b id="balance">1,000,000</b></div></div></div></header>
+<main class="wrap"><section class="intro"><div class="eyebrow">♛ GOLDEN ARCADE · FREE PRACTICE</div><h1>Royal Roulette 3D</h1>
+<p>Pick your color or a lucky number, spin a beautiful royal wheel and see where the ball lands. No account, paid coins, cash-out or real-money prizes.</p></section>
+<div class="layout"><section class="game-card card"><div class="status"><span>✦ EUROPEAN ROULETTE · ONE ZERO</span><span>FREE PRACTICE ONLY</span></div>
+
+  <div class="roulette-scene" role="group" aria-label="3D-styled spinning European roulette wheel">
+    <div class="wheel-rim"></div><div class="wheel-arrow">▼</div>
+    <canvas id="rouletteCanvas" width="512" height="512" aria-label="Spinning roulette wheel with ball"></canvas>
+    <div class="result-number" id="resultNumber">?</div>
+  </div>
+  <div class="roulette-result">LAST RESULT · <strong id="lastResult">Ready to spin</strong></div>
+  <h2>CHOOSE YOUR RESULT</h2>
+  <div class="choice-options" role="group" aria-label="Roulette betting categories">
+    <button class="chip red" data-choice="red">🔴 RED · 2×</button><button class="chip black" data-choice="black">⚫ BLACK · 2×</button>
+    <button class="chip" data-choice="even">EVEN · 2×</button><button class="chip" data-choice="odd">ODD · 2×</button>
+    <button class="chip" data-choice="low">1–18 · 2×</button><button class="chip" data-choice="high">19–36 · 2×</button>
+  </div>
+  <p class="info" style="margin:12px 0 4px">Or choose an exact number (0–36). A correct number pays 36× your free points. Roulette has only one zero.</p>
+  <div class="numbergrid" id="numberGrid" role="group" aria-label="Pick number from 0 to 36"></div>
+  <div class="notice">YOUR PICK: <b id="pickedText">RED</b></div>
+
+<div id="message" class="message" role="status" aria-live="polite">Choose a bet to begin</div>
+<h2>CHOOSE FREE PRACTICE POINTS</h2>
+<div class="bet-options" role="group" aria-label="Choose virtual practice stake">
+<button class="chip active" data-bet="1000">1K</button><button class="chip" data-bet="5000">5K</button><button class="chip" data-bet="10000">10K</button><button class="chip" data-bet="50000">50K</button>
+</div><div class="play-controls"><button class="gold-button" id="play" type="button">SPIN ROULETTE</button><button class="clearbtn" id="sound" type="button" aria-label="Toggle game sound">♫</button></div>
+<p class="tip">Selected stake: <b id="betValue">1,000</b> free practice points. Win adds points; a losing round subtracts the stake. Refill is free.</p>
+</section><aside class="side">
+<section class="card"><h3>YOUR FREE POINTS</h3><p class="info">One million free points at the start. Royal Slots and Roulette share these local demo points in this browser, but do not share the original eight-game or Sharika wallets.</p><button class="gold-button" id="refill" style="min-width:0;width:100%" type="button">✦ FREE REFILL · 1,000,000</button><div class="notice">Practice only · points have no cash value, cannot be purchased, transferred, redeemed or withdrawn.</div></section>
+<section class="card"><h3>HOW ROULETTE WORKS</h3><div class="rules"><div><span>Red / Black</span><b>2×</b></div><div><span>Even / Odd</span><b>2×</b></div><div><span>1–18 / 19–36</span><b>2×</b></div><div><span>Exact number</span><b>36×</b></div><div><span>0 (green)</span><b>Only exact 0 wins</b></div></div><p class="info">The ball lands on one random number 0–36. Multipliers include your original stake.</p></section>
+<section class="card"><h3>RECENT ROUNDS</h3><div class="history" id="history" aria-live="polite"></div></section>
+</aside></div></main><script src="../../assets/royal-casino.js" defer></script></body></html>
