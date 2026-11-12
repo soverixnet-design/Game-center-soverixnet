@@ -16,11 +16,11 @@
 - B2B catalogue and manual USD quote request interface deployed.
 - Games and Digital Assets have **separate** Cloudflare Workers and D1 databases.
 
-## New public standalone demo (source added, live WebGL playtest still pending)
+## New standalone demo (separate Cloudflare deployment; browser playtest pending)
 
 - Royal Crystal Run 3D HTML demo added at `demos/royal-crystal-run-3d/index.html` and linked from the public Game Center homepage.
 - It runs independently of the eight privately hosted original games and uses session-local practice coins.
-- Browser GPU/WebGL playtesting, Pages publication and Sharika app integration are **not yet confirmed**. No Cloudflare staging Worker was changed by this update.
+- Cloudflare Worker deployment is at 100% and workers.dev enabled. Browser GPU/WebGL playtesting and Sharika app integration are **not yet confirmed**. No Cloudflare staging Worker was changed by this update.
 
 ## Incomplete / NOT production ready
 
