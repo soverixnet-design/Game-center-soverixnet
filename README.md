@@ -9,7 +9,18 @@ Public-facing source for the **SOVERIX 12-game hub**: eight privately hosted ori
 - **[Open the complete 12-game SOVERIX Game Center](https://soverix-game-center.soverixnet.workers.dev/)** — one mobile-friendly catalogue with the eight original hosted games and four standalone royal previews. Original eight open through the existing `/demo` lobby; the four standalone games open directly. The catalogues are unified, but wallets are **not** universally connected.
 - **[Play Royal Slots 3D](https://soverix-game-center.soverixnet.workers.dev/slots/)** — animated CSS-3D spinning reels, transparent payouts, free practice points and local round history.
 - **[Play Royal Roulette 3D](https://soverix-game-center.soverixnet.workers.dev/roulette/)** — 3D-styled European roulette wheel with moving ball, 0–36 number or color choices, practice points, transparent payouts and local history.
-- Slots and Roulette share the same localStorage demo balance on this browser origin. Initial balance and free refill: **1,000,000** nontransferable practice points; no purchases or withdrawals.
+- **New V2:** Slots and Roulette share one isolated server-authoritative D1 guest wallet and round history (not localStorage balance). Enter a nickname to receive **1,000,000 free practice points**, with no email/OTP. A secure random guest token is stored in the browser; the token hash is stored server-side. Free refill becomes available below 100K points with a cooldown. No purchases, cash value, withdrawal or transfer.
+
+## Royal Casino V2 — Betting board and multiplayer practice
+
+- **Slots:** choose a 1K/5K/10K/50K/100K free chip, press **PLACE BET & SPIN**, watch three animated royal reels. Triple symbols pay 4×–25×; any matching pair returns the stake; other results lose only the free practice stake.
+- **Roulette:** choose a chip, tap **multiple** positions on a real 0–36 European-style betting grid, or RED/BLACK, ODD/EVEN, 1–18/19–36. See every placed chip and the total stake; use UNDO/CLEAR before pressing **CONFIRM BETS & SPIN**. Supports up to 20 chips and 500K total practice stake per round. A color/outside win pays 2×; a correct single number pays 36× including stake.
+- All random outcomes and payouts are generated **on the Cloudflare Worker**, not by browser JavaScript. Atomic D1 batch updates settle each round and idempotent round request IDs prevent accidental repeated charges on network retries.
+- Every guest has an independent server-side balance, personal history and a public, free-practice ranking of recorded best wins. **Active players** means seen in the last 15 minutes; it does not imply a live synchronous table.
+- The games can be played concurrently by multiple independent guests, but they do **not yet share one synchronized timed roulette round**. Stress/load testing, anti-abuse rate limiting and scale assessment remain required before advertising a production multiplayer service.
+- **Only these two casino practice games share a wallet.** The original eight games, Royal Crystal Run and Royal Battle still have separate game providers/progress and are untouched by this V2 release.
+- Auth is browser-remembered guest access with no verified identity. Users who clear their browser data may lose access to their practice account. No personal money, card details or payment processing is accepted.
+- Files: `assets/royal-casino-v2.css`, `assets/royal-casino-v2.js`, `services/practice-api.js`, and `services/migrations/0001_practice.sql`. Database `soverix-game-center-practice` is isolated from Sharika and from the original games' D1 databases.
 
 ## Live staging links
 
