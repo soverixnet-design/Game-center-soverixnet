@@ -1,29 +1,49 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#130e2c"><meta name="description" content="Free practice Royal Slots 3D with royal gold design, animated 3D reels, virtual points and round history.">
-<title>SOVERIX | Royal Slots 3D</title><link rel="stylesheet" href="../../assets/royal-casino.css"></head>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0f0924"><meta name="description" content="Royal Slots 3D — premium 3D-style free practice game with a proper betting board, independent guest accounts and real server settlement.">
+<title>SOVERIX | Royal Slots 3D</title><link rel="stylesheet" href="../../assets/royal-casino-v2.css"></head>
 <body data-game="slots"><div class="spark-bg" aria-hidden="true"></div>
 <header><div class="wrap head"><a class="logo" href="../../index.html"><span class="logo-badge">♛</span><span><b>SOVERIX</b><small>ROYAL GAME CENTER</small></span></a>
-<div class="headlinks"><a class="mini-link" href="../../index.html">ALL GAMES</a><a class="mini-link" href="../royal-roulette-3d/">ROULETTE</a><div class="coinbox"><span>✦</span><b id="balance">1,000,000</b></div></div></div></header>
-<main class="wrap"><section class="intro"><div class="eyebrow">♛ GOLDEN ARCADE · FREE PRACTICE</div><h1>Royal Slots 3D</h1>
-<p>Spin the royal 3D reels, match magnificent symbols and chase your highest practice win! No account, paid coins, cash-out or real-money prizes.</p></section>
-<div class="layout"><section class="game-card card"><div class="status"><span>✦ THREE REEL CHALLENGE</span><span>FREE PRACTICE ONLY</span></div>
+<div class="headlinks"><a class="mini-link" href="../../index.html">ALL 12 GAMES</a><a class="mini-link" href="/roulette/">ROULETTE ↗</a>
+<div class="badgeLive" id="connectStatus">● CONNECTING</div><div class="profile-badge"><span class="avatar">♛</span><span id="playerName">Guest</span></div>
+<div class="coinbox" title="Free practice points — never real money">✦ <b id="balance">—</b></div></div></div></header>
+<main class="wrap">
+<section class="hero-area"><div><div class="overline">♛ ORIGINAL ROYAL ARCADE · FREE PRACTICE</div><h1>ROYAL <span>SLOTS</span> 3D</h1>
+<p>Spin glorious animated reels and chase royal combinations.
+ All outcomes and balances are verified by our separate free-practice game server. No purchases, real-money rewards or withdrawals.</p></div><div class="hero-insignia" aria-hidden="true">🎰</div></section>
+<div class="layout"><section class="game-card card">
+<div class="battle-banner"><strong>✦ GOLDEN SLOT CHAMBER</strong><span>SERVER-VERIFIED FREE DEMO</span></div>
 
-  <div class="slot-stage" role="group" aria-label="Three dimensional spinning slot reels">
-    <div class="marquee">♛ ROYAL JACKPOT ♛</div>
-    <div class="reel-window"><div class="payline"></div><div id="reels" style="display:contents"></div></div>
-    <div class="slot-footer">✦ MATCH THREE FOR ROYAL WINS ✦</div>
-  </div>
-  <p class="tip">Three matching symbols win the listed multiplier. Any two matching return the stake. Otherwise, the free practice points placed for that round are lost.</p>
+<div class="slot-stage" role="group" aria-label="Royal 3D spinning reels">
+  <div class="marquee">♛ ROYAL JACKPOT ♛</div><div class="reel-window"><div class="payline"></div><div id="reels" style="display:contents"></div></div>
+  <div class="slot-footer">MATCH THE ROYAL SYMBOLS · WIN PRACTICE POINTS</div>
+</div>
+<p class="tip">3 matching symbols pay 4×–25×. Any 2 matching return your stake. Other results lose the selected free points.</p>
 
-<div id="message" class="message" role="status" aria-live="polite">Choose a bet to begin</div>
-<h2>CHOOSE FREE PRACTICE POINTS</h2>
-<div class="bet-options" role="group" aria-label="Choose virtual practice stake">
-<button class="chip active" data-bet="1000">1K</button><button class="chip" data-bet="5000">5K</button><button class="chip" data-bet="10000">10K</button><button class="chip" data-bet="50000">50K</button>
-</div><div class="play-controls"><button class="gold-button" id="play" type="button">SPIN ROYAL SLOTS</button><button class="clearbtn" id="sound" type="button" aria-label="Toggle game sound">♫</button></div>
-<p class="tip">Selected stake: <b id="betValue">1,000</b> free practice points. Win adds points; a losing round subtracts the stake. Refill is free.</p>
+<div id="message" class="message" role="status" aria-live="polite">Join as a guest to play free.</div>
+<div class="bet-panel"><div class="bet-header"><h2>CHOOSE YOUR BETTING CHIP</h2><small>All chips are free virtual points</small></div>
+<div class="bet-options" role="group" aria-label="Select free point chip">
+<button class="chip active" data-chip="1000">1K</button><button class="chip" data-chip="5000">5K</button><button class="chip" data-chip="10000">10K</button><button class="chip" data-chip="50000">50K</button><button class="chip" data-chip="100000">100K</button></div>
+<div class="bet-guide">Choose one stake. Each spin deducts this amount once; your results are decided by the server.
+ You can review the amount before spinning.</div>
+<div class="bet-summary"><div><small>BET PER SPIN</small><strong class="num" id="totalStake">1,000</strong></div><div><small>AVAILABLE BALANCE</small><strong class="num" id="availableBalance">—</strong></div></div>
+<div class="control-actions">
+<button class="gold-button" id="play" type="button" disabled>⚡ PLACE BET & SPIN</button><button class="flatbtn" id="sound" aria-label="Toggle sound">♫</button></div>
+</div>
+<p class="score-foot">This is a free simulated casino game for entertainment. You cannot buy these points, wager real money, exchange points for cash, gift them or transfer them to Sharika wallets.</p>
 </section><aside class="side">
-<section class="card"><h3>YOUR FREE POINTS</h3><p class="info">One million free points at the start. Royal Slots and Roulette share these local demo points in this browser, but do not share the original eight-game or Sharika wallets.</p><button class="gold-button" id="refill" style="min-width:0;width:100%" type="button">✦ FREE REFILL · 1,000,000</button><div class="notice">Practice only · points have no cash value, cannot be purchased, transferred, redeemed or withdrawn.</div></section>
-<section class="card"><h3>ROYAL PAYTABLE</h3><div id="payoutRules" class="rules"></div><p class="info">Payouts above include the original free practice stake, not an extra prize.</p></section>
-<section class="card"><h3>RECENT ROUNDS</h3><div class="history" id="history" aria-live="polite"></div></section>
-</aside></div></main><script src="../../assets/royal-casino.js" defer></script></body></html>
+<section class="card"><h3>♛ PLAYER LOBBY</h3><div class="live-caption"><span id="activePlayers">—</span> players active in the last 15 minutes</div>
+<p class="info">Your game session and point balance are stored on our practice server. Come back in the same browser to continue playing.</p>
+<button class="gold-button" style="min-width:0;width:100%" id="refill" type="button">✦ FREE REFILL</button>
+<p class="session-note">Free refill is available below 100K points, with a short cooldown. Each guest has an independent balance.</p></section>
+<section class="card"><h3>🏆 TOP PRACTICE WINS</h3><div class="topwins" id="leaderboard"><p class="info">Loading leaders…</p></div><p class="session-note">The ranking is based on the highest recorded free-practice win, not redeemable prizes.</p></section>
+<section class="card"><h3>✦ SYMBOL PAYTABLE</h3>
+<div class="slot-paytable" id="paytable"></div>
+<p class="info">Total payout includes the original stake; only profit is shown as a win.</p></section>
+<section class="card"><h3>🧾 YOUR RECENT ROUNDS</h3><div class="history" id="history"><p class="info">No rounds yet.</p></div></section></aside></div></main>
+<div class="guest-layer" id="guestLayer" hidden><form class="guest-panel" id="guestForm"><span class="logo-big">♛</span><div class="eyebrow">THE ROYAL FLOOR IS OPEN</div><h2>JOIN FREE PRACTICE</h2>
+<p>Choose a player nickname to get <b>1,000,000 free practice points</b> on the game server. No email, password or payment needed.</p>
+<input id="guestName" maxlength="24" minlength="2" placeholder="Enter your player name" autocomplete="nickname" required>
+<div class="error" id="joinError" role="alert"></div><button class="gold-button" id="joinButton" type="submit">♛ ENTER THE ROYAL FLOOR</button>
+<p class="session-note">Practice points are not real money and have no cash value.</p></form></div>
+<script src="../../assets/royal-casino-v2.js" defer></script></body></html>
