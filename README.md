@@ -13,7 +13,7 @@ Public-facing source for the **SOVERIX Original Games Center**. The **playable o
 
 ## New standalone 3D practice demo
 
-- **[Royal Crystal Run 3D](demos/royal-crystal-run-3d/index.html)** is a new independent, browser-playable WebGL runner with touch/keyboard controls, score, lives and local practice coins.
+- **[Play Royal Crystal Run 3D](https://soverix-royal-crystal-3d.soverixnet.workers.dev/)** ([view source](demos/royal-crystal-run-3d/index.html)) is a new independent, browser-playable WebGL runner with touch/keyboard controls, score, lives and local practice coins.
 - Unlike the eight hosted proprietary originals, this **new demonstration is intentionally published in this public repository**. Its complete standalone game page is distributed as a self-contained compressed HTML bundle using native browser gzip support.
 - It is **not connected to Sharika Main Wallet, D1 or the private Cloudflare provider**. There are no wagers, purchases or real-money functions. This addition does not change any of the existing eight games.
 - Open the file through a static site such as GitHub Pages; GitHub's `blob` viewer shows source rather than running HTML.
