@@ -62,5 +62,45 @@
     "symbol": "🥗",
     "subtitle": "Illustrated food items",
     "description": "Original Greedy Wheel with its illustrated food symbols and animations."
+  },
+  {
+    "id": "royal_crystal_run_3d",
+    "name": "Royal Crystal Run 3D",
+    "category": "Arcade",
+    "symbol": "💎",
+    "subtitle": "10-level 3D adventure",
+    "description": "Collect crystals, clear ten royal stages, beat two bosses and track daily missions.",
+    "kind": "standalone",
+    "play_url": "https://soverix-royal-crystal-3d.soverixnet.workers.dev/"
+  },
+  {
+    "id": "royal_battle_3d",
+    "name": "Royal Battle 3D",
+    "category": "Battle",
+    "symbol": "⚔️",
+    "subtitle": "Sword and boss battles",
+    "description": "Fight enemies, unleash special powers, upgrade your sword and defeat the Shadow King.",
+    "kind": "standalone",
+    "play_url": "https://soverix-royal-battle-preview.soverixnet.workers.dev/"
+  },
+  {
+    "id": "royal_slots_3d",
+    "name": "Royal Slots 3D",
+    "category": "Slots",
+    "symbol": "🎰",
+    "subtitle": "Golden 3D reel casino practice",
+    "description": "Spin animated golden reels, match symbols and win or lose free practice points.",
+    "kind": "standalone",
+    "play_url": "https://soverix-game-center.soverixnet.workers.dev/slots/"
+  },
+  {
+    "id": "royal_roulette_3d",
+    "name": "Royal Roulette 3D",
+    "category": "Roulette",
+    "symbol": "🎡",
+    "subtitle": "Royal roulette wheel",
+    "description": "Pick red, black or a number, spin the roulette ball and win or lose free practice points.",
+    "kind": "standalone",
+    "play_url": "https://soverix-game-center.soverixnet.workers.dev/roulette/"
   }
 ]
