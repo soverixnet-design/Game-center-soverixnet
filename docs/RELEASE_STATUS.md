@@ -2,6 +2,18 @@
 
 **Snapshot: November 12, 2026 · staging environment**
 
+## Unified 12-game hub, Royal Slots 3D & Royal Roulette 3D (November 12, 2026)
+
+- Live mobile-friendly hub: https://soverix-game-center.soverixnet.workers.dev/ — separate Cloudflare Worker deployed at 100% traffic.
+- One game grid displays **twelve cards**: unchanged original first eight (their `/demo` launcher) and four standalone royal games (Crystal Run 3D, Battle 3D, Slots 3D, Roulette 3D).
+- The original eight game provider, its private game source, its demo wallet, the Sharika app, and existing standalone Crystal/Battle Workers were **not modified** by this unified frontend deployment.
+- New free Slots game: https://soverix-game-center.soverixnet.workers.dev/slots/ — CSS-3D animated symbol reels; visible and documented payout multipliers; win/loss, balance updates and locally stored round history.
+- New free Roulette game: https://soverix-game-center.soverixnet.workers.dev/roulette/ — 3D-styled canvas wheel and ball, one zero (0–36), red/black, even/odd, high/low, and exact-number choices. Transparent 2×/36× total payouts; win/loss and history.
+- Slots and Roulette start with one million **free, locally stored, nontransferable practice points**, share that local browser balance, and provide a free refill. No purchased coins, real-money stakes, exchange, withdrawals, commercial settlement or app-wallet integration.
+- Browser Rendering smoke tests: homepage 12 cards; mobile portrait screenshots of hub, Slots and Roulette; roulette 37 number buttons; Slots 18 reel faces; full timed Slots spin and settlement; full timed Roulette spin and settlement; payout-rule calculations (zero, exact number, red/black); shared demo balance across the two paths on the same origin.
+- Not yet tested: manual gameplay on several physical Android devices, long-session frame rate and performance, race conditions across multiple tabs, browser storage loss, accessibility, all possible slot payouts, and regulated-market compliance (not applicable to the free practice version but must be reviewed for any future paid product).
+- **No shared server-side wallet across all 12 games.** The eight original games still use their own provider; Crystal, Battle, and Casino previews have separate local practice systems. The unified site is a launcher, not an integrated settlement backend.
+
 ## Verified live
 
 - Cloudflare Games Provider storefront: `https://soverix-games-provider-staging.soverixnet.workers.dev/`
@@ -48,12 +60,12 @@
 
 ## Repo safety
 
-The GitHub repository is **public**. It contains only the public catalogue gateway and operating/integration documentation. The original game HTML/JavaScript, admin/license backend, Cloudflare secrets, D1 data and credentials remain outside this repository.
+The GitHub repository is **public**. It now includes the unified catalogue and public original standalone practice-game source (Crystal, Battle, Slots and Roulette). The **eight proprietary original game engines**, admin/license backend, Cloudflare secrets, D1 data and credentials remain outside this repository.
 
 For a complete game-source archive, make the repository **private** first. This publication does **not** move the original game engine from Cloudflare or change the live Worker.
 
 ## Next priorities
 
-1. Finish server-authoritative demo wallet and each original game's round logic/integration.
-2. Test game bet → countdown → result → atomic balance update → history for all eight games, including mobile browser.
-3. Complete one-time customer app SDK, short-lived launch tokens, operator wallet API and suspension tests before licensing production games.
+1. Test the new two practice games on several real Android phones, including UI scaling and browser state recovery, and tune slot/roulette animations and odds disclosures.
+2. Finish server-authoritative demo wallet and original game's round logic; only then evaluate unified account and practice-wallet integration across the 12 titles.
+3. Finish secure production game launch, licensing APIs and wallet integration for third-party apps separately from the free practice showcase.
