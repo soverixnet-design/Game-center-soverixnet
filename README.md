@@ -1,8 +1,15 @@
 # SOVERIX Game Center
 
-Public-facing source for the **SOVERIX Original Games Center**. The **playable original games, demo wallet and B2B licensing APIs remain hosted on Cloudflare**.
+Public-facing source for the **SOVERIX 12-game hub**: eight privately hosted original games plus four independent royal practice games. The original game engines, existing demo wallet and B2B licensing APIs remain hosted on their existing Cloudflare Game Provider.
 
 > This repository is **public**. It intentionally does **not** include the proprietary HTML/JavaScript game engines, customer credentials, admin passwords, D1 data, Cloudflare tokens, or source for the private licensing server. Keep the game engine in a **private** repository.
+
+## Unified live game center
+
+- **[Open the complete 12-game SOVERIX Game Center](https://soverix-game-center.soverixnet.workers.dev/)** — one mobile-friendly catalogue with the eight original hosted games and four standalone royal previews. Original eight open through the existing `/demo` lobby; the four standalone games open directly. The catalogues are unified, but wallets are **not** universally connected.
+- **[Play Royal Slots 3D](https://soverix-game-center.soverixnet.workers.dev/slots/)** — animated CSS-3D spinning reels, transparent payouts, free practice points and local round history.
+- **[Play Royal Roulette 3D](https://soverix-game-center.soverixnet.workers.dev/roulette/)** — 3D-styled European roulette wheel with moving ball, 0–36 number or color choices, practice points, transparent payouts and local history.
+- Slots and Roulette share the same localStorage demo balance on this browser origin. Initial balance and free refill: **1,000,000** nontransferable practice points; no purchases or withdrawals.
 
 ## Live staging links
 
@@ -28,8 +35,11 @@ Public-facing source for the **SOVERIX Original Games Center**. The **playable o
 
 ## What is in this repository?
 
-- `index.html`, `assets/site.css`, `assets/site.js` — the English public landing page, eight hosted original game listings, and a link to the standalone 3D demo.
-- `data/games.json` — publicly displayable metadata for the eight hosted games, **not** their game-engine code.
+- `index.html`, `assets/site.css`, `assets/site.js` — one English public landing page and **twelve unified cards**, routing original games to their preserved demo lobby and four royal games to direct play URLs.
+- `data/games.json` — metadata for eight hosted original games (not their private source) plus four standalone game entries.
+- `assets/royal-casino.css` and `assets/royal-casino.js` — shared mobile-friendly practice Slots / Roulette visual effects, balance, game rules and round history.
+- `demos/royal-slots-3d/index.html` and `demos/royal-roulette-3d/index.html` — two playable royal casino practice pages.
+- Cloudflare Worker `soverix-game-center` serves the unified frontend and both games without changing the eight-game provider.
 - `demos/royal-crystal-run-3d/index.html` — the public 3D practice game (10 levels, missions, bosses, local ranking).
 - `docs/INTEGRATION.md` — developer integration model and server-side credential rules.
 - `docs/RELEASE_STATUS.md` — verified staging capabilities and unfinished production work.
@@ -37,7 +47,7 @@ Public-facing source for the **SOVERIX Original Games Center**. The **playable o
 
 ## How to run
 
-Open `index.html` in a browser, or serve this repository with any static web server. The **Play** buttons point to the existing Cloudflare demo. No app logins or payments are handled by this GitHub frontend.
+Open **https://soverix-game-center.soverixnet.workers.dev/** to play. For development, serve this repository with a local static HTTP server (rather than using file:// due to `fetch` and path routing). The original eight cards open the existing Cloudflare demo lobby; the new royal preview cards open their standalone URLs. No app logins, real-money wagers or payments are handled by these practice games.
 
 ## Business flow
 
@@ -51,6 +61,6 @@ Open `index.html` in a browser, or serve this repository with any static web ser
 
 ## Deployment
 
-The static site can be hosted on GitHub Pages once Pages is enabled for this repository. That does **not** deploy the proprietary game backend. The live Cloudflare game server is separate and has not been changed by this repository publication.
+The static unified site and the new Slots/Roulette preview pages are deployed at Cloudflare Worker `soverix-game-center`. It serves `index.html`, `assets/site.*`, `data/games.json`, the two practice pages, and shared casino CSS/JS. The **existing** proprietary game provider and its eight games have not been overwritten or migrated. The other two standalone WebGL games also retain their original separate Workers.
 
 For a full source backup, change this repo's visibility to **Private** first, then review which proprietary source files are safe to import.
