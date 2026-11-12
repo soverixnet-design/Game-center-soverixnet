@@ -18,6 +18,14 @@ Public-facing source for the **SOVERIX Original Games Center**. The **playable o
 - It is **not connected to Sharika Main Wallet, D1 or the private Cloudflare provider**. There are no wagers, purchases or real-money functions. This addition does not change any of the existing eight games.
 - The standalone title is already hosted at the Cloudflare link above. GitHub's `blob` viewer shows source rather than running HTML.
 
+## New Royal Battle 3D combat preview
+
+- **[Play Royal Battle 3D](https://soverix-royal-battle-preview.soverixnet.workers.dev/)** — standalone live WebGL arena with sword attacks, special moves, dodge, waves, upgrades, and a final Shadow King fight.
+- Source: `demos/royal-battle-3d/index.html`. Separate Cloudflare Worker: `soverix-royal-battle-preview`.
+- Browser smoke tests verified mobile launch, visible 3D arena, movement, attacks, HP/damage, special attack, wave completion, three upgrade choices and end-to-end boss victory (automated test).
+- **Preview only:** free practice shards, local score, no real-money purchases, no cash-out, no server-authoritative leaderboard, and no Sharika Main Wallet or D1 integration.
+- This new preview is independent of the eight privately hosted original games and the older Royal Crystal Run 3D live game.
+
 ## What is in this repository?
 
 - `index.html`, `assets/site.css`, `assets/site.js` — the English public landing page, eight hosted original game listings, and a link to the standalone 3D demo.
