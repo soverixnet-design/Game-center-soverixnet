@@ -5,6 +5,9 @@
 ## Royal Casino V2 — isolated D1 guest betting preview, 12 November 2026
 
 - New Cloudflare D1 database: `soverix-game-center-practice` (separate from Sharika and existing original games). Versioned migration is in `services/migrations/0001_practice.sql`.
+- **Published live** at `https://soverix-game-center.soverixnet.workers.dev/` with new Slots and Roulette pages at `/slots/` and `/roulette/`. Main Worker `soverix-game-center` is running module code with the isolated D1 binding at 100% deployment. The previous original-eight-game provider Worker was not modified.
+- The extra temporary API Worker was disabled on its workers.dev subdomain after same-origin API integration; the V2 preview Worker remains available for safe future QA.
+- Live smoke test: 12 homepage cards, 3 betting instruction steps, mobile Slots and Roulette, successful server guest creation, server-held Slots round, and a complete live Roulette 10K multi-chip round (RED + number 7) with correct result, balance and history.
 - New practice API Worker source: `services/practice-api.js`; authenticated guests via 256-bit random token with SHA-256 token hash stored in D1, nickname only, no email or payment.
 - Server-authoritative Slots outcomes, 0–36 roulette results, total wager, payout, idempotent request ID, isolated player account balance and round history. D1 batched settlement is used to avoid two charges for a repeated request.
 - New premium mobile pages and explicit how-to-bet steps: multi-chip roulette betting table (numbers plus outside bets), visible placed bets and TOTAL BET, UNDO/CLEAR, confirmation button, 3D-styled roulette wheel, reel animations, individual player balance, recent history and top-practice-win ranking.
