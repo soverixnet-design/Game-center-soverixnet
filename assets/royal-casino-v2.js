@@ -4,7 +4,7 @@
 (()=>{'use strict';
 const $=id=>document.getElementById(id);
 const mode=document.body.dataset.game==='roulette'?'roulette':'slots';
-const API='https://soverix-game-center-practice-api.soverixnet.workers.dev';
+const API=location.origin; // This game's own Worker serves /api routes with an isolated D1 binding.
 const TOKEN_KEY='soverix-game-center-practice-guest-token-v2',PENDING_KEY='soverix-game-center-practice-pending-v2';
 const SYMBOLS=['7️⃣','💎','👑','⭐','🍒','🍋'],PAYS=[25,18,12,9,6,4],WHEEL=[0,32,15,19,4,21,2,25,17,34,6,27,13,36,11,30,8,23,10,5,24,16,33,1,20,14,31,9,22,18,29,7,28,12,35,3,26],RED=new Set([1,3,5,7,9,12,14,16,18,19,21,23,25,27,30,32,34,36]);
 const PI=Math.PI,TAU=PI*2;
