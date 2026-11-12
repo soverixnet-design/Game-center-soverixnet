@@ -88,8 +88,8 @@
     "name": "Royal Slots 3D",
     "category": "Slots",
     "symbol": "🎰",
-    "subtitle": "Golden 3D reel casino practice",
-    "description": "Spin animated golden reels, match symbols and win or lose free practice points.",
+    "subtitle": "Royal 3D slots · server-verified practice",
+    "description": "Choose a practice chip, place your stake, spin gold 3D reels, and see live server-verified wins, losses, history and ranking.",
     "kind": "standalone",
     "play_url": "https://soverix-game-center.soverixnet.workers.dev/slots/"
   },
@@ -98,8 +98,8 @@
     "name": "Royal Roulette 3D",
     "category": "Roulette",
     "symbol": "🎡",
-    "subtitle": "Royal roulette wheel",
-    "description": "Pick red, black or a number, spin the roulette ball and win or lose free practice points.",
+    "subtitle": "Royal roulette · multiple practice bets",
+    "description": "Place multiple chips on 0–36, red/black and outside bets, confirm total stake, spin and view real server-verified practice results.",
     "kind": "standalone",
     "play_url": "https://soverix-game-center.soverixnet.workers.dev/roulette/"
   }
