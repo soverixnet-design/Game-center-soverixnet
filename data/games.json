@@ -1,0 +1,66 @@
+[
+  {
+    "id": "lion_food",
+    "name": "Lion Food Wheel",
+    "category": "Food Wheel",
+    "symbol": "🦁",
+    "subtitle": "Royal original wheel",
+    "description": "The original Lion Food Wheel design and spinning gameplay."
+  },
+  {
+    "id": "night_food",
+    "name": "Night Food Wheel",
+    "category": "Food Wheel",
+    "symbol": "🌙",
+    "subtitle": "Night edition",
+    "description": "The original nighttime food wheel and animations."
+  },
+  {
+    "id": "jackpot_fruit",
+    "name": "Fruit Jackpot",
+    "category": "Jackpot",
+    "symbol": "🍒",
+    "subtitle": "Bonus rounds",
+    "description": "Original fruit jackpot interface with bonus rounds."
+  },
+  {
+    "id": "slots",
+    "name": "Slots",
+    "category": "Slots",
+    "symbol": "🎰",
+    "subtitle": "Classic reels",
+    "description": "Original spinning reels and slots effects."
+  },
+  {
+    "id": "sovera_gaddy",
+    "name": "Sovera Gaddy",
+    "category": "Food Wheel",
+    "symbol": "🎡",
+    "subtitle": "Signature 3D wheel",
+    "description": "The original Sovera Gaddy food-wheel experience."
+  },
+  {
+    "id": "sovera_food",
+    "name": "Sovera Food Wheel",
+    "category": "Food Wheel",
+    "symbol": "🍔",
+    "subtitle": "Food wheel arcade",
+    "description": "The original Sovera food-wheel interface."
+  },
+  {
+    "id": "carrom",
+    "name": "Carrom",
+    "category": "Board",
+    "symbol": "🎱",
+    "subtitle": "Board challenge",
+    "description": "Original interactive Carrom board preview."
+  },
+  {
+    "id": "greedy_wheel",
+    "name": "Greedy Wheel",
+    "category": "Food Wheel",
+    "symbol": "🥗",
+    "subtitle": "Illustrated food items",
+    "description": "Original Greedy Wheel with its illustrated food symbols and animations."
+  }
+]

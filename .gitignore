@@ -1,0 +1,13 @@
+.env
+.env.*
+!.env.example
+node_modules/
+dist/
+.wrangler/
+.DS_Store
+*.log
+*.key
+*.pem
+*credentials*.json
+secrets/
+private-games/
