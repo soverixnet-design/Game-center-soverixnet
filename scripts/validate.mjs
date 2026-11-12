@@ -14,5 +14,8 @@ assert.ok(html.includes('Play Original Games'));
 assert.ok(html.includes('Manual USD')||html.includes('payment'));
 assert.ok(script.includes('data/games.json'));
 assert.ok(script.includes('/demo'));
+assert.ok(html.includes('demos/royal-crystal-run-3d/index.html'),'3D demo must be linked from the homepage');
+const demo=fs.readFileSync('demos/royal-crystal-run-3d/index.html','utf8');
+assert.ok(demo.includes('Royal Crystal Run 3D') && demo.includes('DecompressionStream'),'Standalone WebGL demo entry must exist');
 assert.ok(!html.includes('<script src="https://soverix-games-provider-staging.soverixnet.workers.dev/original/'));
 console.log('Validated public SOVERIX Game Center catalogue, links and frontend structure.');
