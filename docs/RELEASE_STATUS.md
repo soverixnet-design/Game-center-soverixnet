@@ -2,6 +2,18 @@
 
 **Snapshot: November 12, 2026 · staging environment**
 
+## Royal Casino V2 — isolated D1 guest betting preview, 12 November 2026
+
+- New Cloudflare D1 database: `soverix-game-center-practice` (separate from Sharika and existing original games). Versioned migration is in `services/migrations/0001_practice.sql`.
+- New practice API Worker source: `services/practice-api.js`; authenticated guests via 256-bit random token with SHA-256 token hash stored in D1, nickname only, no email or payment.
+- Server-authoritative Slots outcomes, 0–36 roulette results, total wager, payout, idempotent request ID, isolated player account balance and round history. D1 batched settlement is used to avoid two charges for a repeated request.
+- New premium mobile pages and explicit how-to-bet steps: multi-chip roulette betting table (numbers plus outside bets), visible placed bets and TOTAL BET, UNDO/CLEAR, confirmation button, 3D-styled roulette wheel, reel animations, individual player balance, recent history and top-practice-win ranking.
+- Verified in Cloudflare Browser Rendering against isolated V2 Preview Worker: all 12 homepage game cards, mobile UI renders, 37 roulette numbers and six outside bet categories, nickname guest account creation with 1M practice points, a complete Slots debit/result/history, a two-chip Roulette bet (RED 5K + NUMBER 7 5K) with server settlement, and the same guest nickname/balance after switching games.
+- An earlier preview test also verified server-generated payout for roulette red/black and a full Slots round. Result animations, server wallet changes and histories were observed after settlement.
+- Not yet verified: large traffic/load testing, thousands of concurrent guests, abuse resistance and rate limits, every possible payout path in real browsers, physical-device testing, browser clearing/recovery, full account security review and independent third-party fairness audit.
+- This is **free practice only**. No real-money wagers, purchased coins, user cash balance, withdrawals, prizes with cash value or Sharika wallet connection. It is **not a regulated real-money betting platform**.
+- Multiplayer scope: concurrent **independent** guest play with a shared database and leaderboard. There is not yet one globally synchronized roulette timer/round.
+
 ## Unified 12-game hub, Royal Slots 3D & Royal Roulette 3D (November 12, 2026)
 
 - Live mobile-friendly hub: https://soverix-game-center.soverixnet.workers.dev/ — separate Cloudflare Worker deployed at 100% traffic.
@@ -9,10 +21,10 @@
 - The original eight game provider, its private game source, its demo wallet, the Sharika app, and existing standalone Crystal/Battle Workers were **not modified** by this unified frontend deployment.
 - New free Slots game: https://soverix-game-center.soverixnet.workers.dev/slots/ — CSS-3D animated symbol reels; visible and documented payout multipliers; win/loss, balance updates and locally stored round history.
 - New free Roulette game: https://soverix-game-center.soverixnet.workers.dev/roulette/ — 3D-styled canvas wheel and ball, one zero (0–36), red/black, even/odd, high/low, and exact-number choices. Transparent 2×/36× total payouts; win/loss and history.
-- Slots and Roulette start with one million **free, locally stored, nontransferable practice points**, share that local browser balance, and provide a free refill. No purchased coins, real-money stakes, exchange, withdrawals, commercial settlement or app-wallet integration.
+- Slots and Roulette now start with one million **free, server-stored, nontransferable practice points**, share the same isolated D1 guest account and provide a conditional free refill (balance below 100K, cooldown). No purchased coins, real-money stakes, exchange, withdrawals, commercial settlement or app-wallet integration.
 - Browser Rendering smoke tests: homepage 12 cards; mobile portrait screenshots of hub, Slots and Roulette; roulette 37 number buttons; Slots 18 reel faces; full timed Slots spin and settlement; full timed Roulette spin and settlement; payout-rule calculations (zero, exact number, red/black); shared demo balance across the two paths on the same origin.
 - Not yet tested: manual gameplay on several physical Android devices, long-session frame rate and performance, race conditions across multiple tabs, browser storage loss, accessibility, all possible slot payouts, and regulated-market compliance (not applicable to the free practice version but must be reviewed for any future paid product).
-- **No shared server-side wallet across all 12 games.** The eight original games still use their own provider; Crystal, Battle, and Casino previews have separate local practice systems. The unified site is a launcher, not an integrated settlement backend.
+- **No shared server-side wallet across all 12 games.** The eight original games still use their own provider; Crystal and Battle maintain separate local progress, while Slots and Roulette now share one independent D1-backed server wallet. The unified site is a launcher, not an integrated settlement backend.
 
 ## Verified live
 
