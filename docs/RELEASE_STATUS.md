@@ -28,6 +28,15 @@
 - **Not yet verified**: full boss defeat / level-10 completion, full 10-level regression run, recovery from localStorage corruption or browser data clearing, user-device testing on diverse Android browsers.
 - **Not connected** to Sharika's Main Wallet, real coin balance, D1 or the existing eight-game Cloudflare provider. No paid bets, cash value or withdrawals.
 
+## Royal Battle 3D — playable preview
+
+- Live isolated preview: https://soverix-royal-battle-preview.soverixnet.workers.dev/
+- New public source: `demos/royal-battle-3d/index.html`, linked from the Game Center frontend independently of the original eight-game collection.
+- Working playtest scope: 3D hero and enemies; mobile direction controls; sword, dodge and crystal storm special; hit points, score and practice shards; three enemy waves; Blade, Armor and Special Power upgrades; Shadow King boss (wave four).
+- Cloudflare Browser Rendering verified initial menu and 3D canvas, movement, attacks, damage, wave-clear upgrade, and automated complete run ending in victory after defeating the boss.
+- **Still to verify:** manual play on real Android devices, accessibility, gameplay balance, frame rate across low-end phones, local progress persistence beyond best-score, and multiplayer or global ranking (not implemented).
+- Virtual practice shards cannot be transferred or exchanged. This preview is not wired to Sharika's Main Wallet, store, or private game-provider wallet; no paid stakes or cash-out.
+
 ## Incomplete / NOT production ready
 
 - Several legacy games calculate or store practice balances locally; the entire collection does **not yet share one authoritative coin wallet**.
