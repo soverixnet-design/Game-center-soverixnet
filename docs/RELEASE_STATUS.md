@@ -16,11 +16,17 @@
 - B2B catalogue and manual USD quote request interface deployed.
 - Games and Digital Assets have **separate** Cloudflare Workers and D1 databases.
 
-## New standalone demo (separate Cloudflare deployment; browser playtest pending)
+## Royal Crystal Run 3D — 10-stage campaign (deployed and smoke-tested)
 
-- Royal Crystal Run 3D HTML demo added at `demos/royal-crystal-run-3d/index.html` and linked from the public Game Center homepage.
-- It runs independently of the eight privately hosted original games and uses session-local practice coins.
-- Cloudflare Worker deployment is at 100% and workers.dev enabled. Browser GPU/WebGL playtesting and Sharika app integration are **not yet confirmed**. No Cloudflare staging Worker was changed by this update.
+- Live game: https://soverix-royal-crystal-3d.soverixnet.workers.dev/ — dedicated Worker deployment confirmed at 100%.
+- GitHub game file: `demos/royal-crystal-run-3d/index.html`; previous working version preserved as `demos/royal-crystal-run-3d/v1-backup.html`.
+- Ten progressively harder stages, crystal and distance objectives, unlock-on-clear progression, practice-only rewards.
+- Boss battles on levels 5 (Fire Guardian) and 10 (Crystal Emperor) use collectible attack orbs to reduce boss health.
+- Three locally resetting daily missions (crystals, jumps, level clears) with claimable practice rewards.
+- Top 10 scores persist in the browser only; **not a global ranking** or server-verified leaderboard.
+- Verified in Cloudflare browser on mobile portrait and landscape: page render, 3D graphics/canvas, START GAME, movement, jump, dynamic distance HUD, mission counter, level picker (9 initially locked), mission panel and ranking panel.
+- **Not yet verified**: full boss defeat / level-10 completion, full 10-level regression run, recovery from localStorage corruption or browser data clearing, user-device testing on diverse Android browsers.
+- **Not connected** to Sharika's Main Wallet, real coin balance, D1 or the existing eight-game Cloudflare provider. No paid bets, cash value or withdrawals.
 
 ## Incomplete / NOT production ready
 
