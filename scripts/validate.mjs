@@ -20,5 +20,9 @@ assert.ok(demo.includes('Royal Crystal Run 3D') && demo.includes('id="game"'),'P
 assert.ok(demo.includes("const LEVELS=[") && demo.includes("'CRYSTAL EMPEROR'") && demo.includes("'FIRE GUARDIAN'"),'10-stage campaign and bosses must exist');
 assert.ok(demo.includes('function stageCheck()') && demo.includes('function boss3D()'),'Campaign and boss gameplay functions must exist');
 assert.ok(demo.includes('DAILY=') && demo.includes('RANKING · THIS DEVICE'),'Missions and local ranking must exist');
+const battle=fs.readFileSync('demos/royal-battle-3d/index.html','utf8');
+assert.ok(html.includes('https://soverix-royal-battle-preview.soverixnet.workers.dev/'),'Royal Battle preview must be linked from homepage');
+assert.ok(battle.includes('function sword()') && battle.includes('function special()') && battle.includes('function dodge()'),'Playable sword, special and dodge actions must exist');
+assert.ok(battle.includes('function spawnWave(') && battle.includes('function chooseUpgrade(') && battle.includes('SHADOW KING'),'Wave upgrades and boss must exist');
 assert.ok(!html.includes('<script src="https://soverix-games-provider-staging.soverixnet.workers.dev/original/'));
 console.log('Validated public SOVERIX Game Center catalogue, links and frontend structure.');
